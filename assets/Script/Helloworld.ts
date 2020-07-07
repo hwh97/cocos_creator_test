@@ -25,10 +25,10 @@ export default class Helloworld extends cc.Component {
         }
         // init logic
         this.label.string = this.text;
-        this.playBtn.node.on('click', this.playVideo, this);
+        this.playBtn.node.on('click', this.play, this);
     }
 
-    playVideo () {
+    play () {
         try {
             const data = JSON.stringify([1, true, ['bar', 5], {foo: 'baz'}]);
             if (window.flutter_inappwebview.callHandler) {
